@@ -1,0 +1,18 @@
+package com.sachacaca.spookypika;
+
+import net.minecraftforge.client.event.EntityRenderersEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+
+@Mod.EventBusSubscriber(modid = SpookyPikaMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
+public class ClientSetup {
+    @SubscribeEvent
+    public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
+        event.registerLayerDefinition(SpookyPikaModel.LAYER, SpookyPikaModel::createBodyLayer);
+    }
+
+    @SubscribeEvent
+    public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
+        event.registerEntityRenderer(ModEntities.SPOOKY_PIKA.get(), SpookyPikaRenderer::new);
+    }
+}
