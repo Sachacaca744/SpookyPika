@@ -13,7 +13,5 @@ public class SpookyPikaMod {
         ModEntities.ENTITY_TYPES.register(bus);
         ModItems.ITEMS.register(bus);
         bus.addListener(ModEntities::registerAttributes);
-        bus.addListener(ClientSetup::registerRenderers);
-        bus.addListener(ClientSetup::registerLayers);
     }
 }
