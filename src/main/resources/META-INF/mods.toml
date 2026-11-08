@@ -1,0 +1,20 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+[[mods]]
+modId="spookypika"
+version="1.0.0"
+displayName="Spooky Pika"
+description='''A spooky Halloween Pikachu-inspired creature for Forge 1.20.1.'''
+[[dependencies.spookypika]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.spookypika]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.21)"
+ordering="NONE"
+side="BOTH"
